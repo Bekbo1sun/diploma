@@ -6,10 +6,10 @@ export default function App(){
     <div className="App"> 
       <Layout>
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
-          <Route path="/about" element={<h1>About</h1>} />
-          <Route path="/contact" element={<h1>Contact</h1>} />
-          <Route path="/delivery" element={<h1>Delivery</h1>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/delivery" element={<Delivery />} />
         </Routes>
       </Layout>
     </div>
