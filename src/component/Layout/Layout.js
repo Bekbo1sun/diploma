@@ -5,6 +5,7 @@ function Layout(props) {
   return (
     <div className="Layout">
      <header>
+        <img src={logo} alt="logo" className="logo"/>
         <Nav />
      </header>
      <aside>
