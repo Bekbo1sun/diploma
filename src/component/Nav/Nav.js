@@ -1,11 +1,9 @@
 import { NavLink } from "react-router-dom";
-import Logo from "../Logo/Logo";
 import "./Nav.css";
 
 export default function Nav() {
   return (
     <nav className="Nav">
-      <Logo />
       <ul className="NavUl">
         <li className="NavItem">
           <NavLink to="/">Home</NavLink>

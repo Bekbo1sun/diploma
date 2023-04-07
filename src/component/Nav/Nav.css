@@ -2,7 +2,10 @@
   display: flex;
   justify-content: center;
 }
-
+.Logo {
+  display: flex;
+  align-items: center;
+}
 .NavUl {
   list-style: none;
   margin: 0;
