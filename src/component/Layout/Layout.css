@@ -5,9 +5,9 @@
   "footer footer";
   grid-template-columns: 1fr 3fr;
 
-  max-width: 789px;
+  max-width: 1366px;
   margin: 0 auto;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .Layout header {
