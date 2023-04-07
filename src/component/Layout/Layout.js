@@ -8,11 +8,10 @@ function Layout(props) {
     <div className="Layout">
       <header>
         <Logo />
-        <CategoryList />
         <Nav />
       </header>
       <aside>
-        
+        <CategoryList />
       </aside>
       <main>{props.children}</main>
       <footer>FOOTER</footer>
