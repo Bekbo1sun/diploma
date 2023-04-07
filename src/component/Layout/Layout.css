@@ -7,6 +7,7 @@
 
   max-width: 789px;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
 .Layout header {
@@ -29,5 +30,5 @@
 }
 
 .Layout .logo {
-  max-width: 100px;
+  max-width: 150px;
 }
