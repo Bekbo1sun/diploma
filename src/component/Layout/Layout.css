@@ -8,12 +8,13 @@
   max-width: 1366px;
   margin: 0 auto;
   padding-top: 10px;
+  background-color: cadetblue;
 }
 
 .Layout header {
   grid-area: header;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

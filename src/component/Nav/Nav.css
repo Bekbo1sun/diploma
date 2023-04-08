@@ -1,6 +1,5 @@
 .Nav {
   display: flex;
-  justify-content: center;
 }
 .Logo {
   display: flex;
@@ -12,7 +11,7 @@
   padding: 0;
   display: flex;
   padding: 10px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .Nav .NavItem {
@@ -21,14 +20,15 @@
 
 .Nav a {
   text-decoration: none;
-  color: brown;
+  color: rgb(218, 54, 54);
   font-weight: bold;
+  margin-left: 130px;
 }
 
 .Nav a:hover {
   color: red;
-}
+} 
 
 .Nav .active {
-  color: grey;
+  color: wheat;
 }

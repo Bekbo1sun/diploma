@@ -6,16 +6,16 @@ export default function Nav() {
     <nav className="Nav">
       <ul className="NavUl">
         <li className="NavItem">
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/" className="NavLink">Home</NavLink>
         </li>
         <li className="NavItem">
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about" className="NavLink">About</NavLink>
         </li>
         <li className="NavItem">
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/contact" className="NavLink">Contact</NavLink>
         </li>
         <li className="NavItem">
-          <NavLink to="/delivery">Delivery</NavLink>
+          <NavLink to="/delivery" className="NavLink">Delivery</NavLink>
         </li>
       </ul>
     </nav>

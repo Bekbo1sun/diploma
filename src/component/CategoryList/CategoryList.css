@@ -1,0 +1,41 @@
+.CategoryList {
+  max-width: 500px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #972323;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0);
+}
+
+.CategoryList h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.CategoryList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.CategoryList li {
+  margin-bottom: 10px;
+}
+
+.CategoryList li a {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  background-color: rgb(241, 151, 151);
+  transition: background-color 0.3s ease;
+  font-size: medium;
+}
+
+.CategoryList li a:hover {
+  background-color: #750303;
+  color: rgb(238, 232, 232);
+}
