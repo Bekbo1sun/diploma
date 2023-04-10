@@ -14,7 +14,9 @@ function Layout(props) {
         <CategoryList />
       </aside>
       <main>{props.children}</main>
-      <footer>FOOTER</footer>
+      <footer>
+        Footer
+      </footer>
     </div>
   );
 }

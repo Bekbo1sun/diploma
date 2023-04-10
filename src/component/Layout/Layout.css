@@ -7,8 +7,8 @@
 
   max-width: 1366px;
   margin: 0 auto;
+  background-color: rgb(219, 149, 19);
   padding-top: 10px;
-  background-color: cadetblue;
 }
 
 .Layout header {
