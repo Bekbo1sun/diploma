@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection } from 'firebase/firestore/lite';
+import { getFirestore, collection } from 'firebase/firestore/lite'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -14,8 +14,10 @@ const firebaseConfig = {
   appId: "1:244786531062:web:61586c18b742e01360fad7"
 };
 
-// Initialize Firebase
+// Инициализация приложения
 const app = initializeApp(firebaseConfig);
+// Инициализация базы данных
 const db = getFirestore(app);
 
-export const categories = database.ref( db,"categories");
+// Получение списка категорий (коллекции документов)
+export const categories = collection(db, 'categories');

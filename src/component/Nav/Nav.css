@@ -20,15 +20,15 @@
 
 .Nav a {
   text-decoration: none;
-  color: rgb( 0, 0, 0);
+  color: rgb(92, 91, 91);
   font-weight: bold;
   margin-left: 130px;
 }
 
 .Nav a:hover {
-  color: rgba(96, 96, 96);
+  color: rgb(209, 6, 6);
 } 
 
 .Nav .active {
-  color: rgb(211, 211, 212);
+  color: rgb(0, 0, 0);
 }
