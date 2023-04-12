@@ -6,21 +6,22 @@ import Contact from "./component/pages/Contact";
 import Delivery from "./component/pages/Delivery";
 import Category from "./component/pages/Category";
 import NotFound from "./component/pages/NotFound";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore/lite";
+import { categoryCollection } from "./firebase";
 
 export const AppContext = createContext({
-  categories [],
+  categories: [],
 });
   
 export default function App(){
   const [categories, setCategories] = useState([]);
 
   useEffect(() => { // выполнить только однажды
-    return getDocs(categoryCollection) //получить категории
+    getDocs(categoryCollection) // получить категории
       .then(({ docs }) => { // когда категории загрузились
         setCategories( // обновить состояние
-          docs.map((doc) => ({ // новый массив
+          docs.map(doc => ({ // новый массив
             ...doc.data(), // из свойств name,slug
             id: doc.id // и свойства id
           }))
@@ -29,18 +30,20 @@ export default function App(){
   }, []);
 
   return(
-    <div className="App"> 
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/delivery" element={<Delivery />} />
-          <Route path="/categories/:slug" element={<Category />} />
+    <div className="App">
+      <AppContext.Provider value={{ categories }}>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/delivery" element={<Delivery />} />
+            <Route path="/categories/:slug" element={<Category />} />
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </AppContext.Provider>
     </div>
   );
 };
