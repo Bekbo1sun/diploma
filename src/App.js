@@ -8,14 +8,16 @@ import Category from "./component/pages/Category";
 import NotFound from "./component/pages/NotFound";
 import { createContext, useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore/lite";
-import { categoryCollection } from "./firebase";
+import { categoryCollection, productsCollection } from "./firebase";
 
 export const AppContext = createContext({
   categories: [],
+  products: [],
 });
   
 export default function App(){
   const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => { // выполнить только однажды
     getDocs(categoryCollection) // получить категории
@@ -27,11 +29,21 @@ export default function App(){
           }))
         )
       });
+
+    getDocs(productsCollection) // получить категории
+      .then(({ docs }) => { // когда категории загрузились
+        setProducts( // обновить состояние
+          docs.map(doc => ({ // новый массив
+            ...doc.data(), // из свойств name,slug
+            id: doc.id // и свойства id
+          }))
+        )
+      });
   }, []);
 
   return(
     <div className="App">
-      <AppContext.Provider value={{ categories }}>
+      <AppContext.Provider value={{ categories, products }}>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
