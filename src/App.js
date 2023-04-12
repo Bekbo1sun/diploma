@@ -8,7 +8,7 @@ import Category from "./component/pages/Category";
 import NotFound from "./component/pages/NotFound";
 
 import { categories } from "./firebase";
-
+  
 export default function App(){
   return(
     <div className="App"> 
