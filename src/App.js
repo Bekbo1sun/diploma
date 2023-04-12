@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router";
+import { Route, Routes } from "react-router";
 import Layout from "./component/Layout/Layout";
 import Home from "./component/pages/Home";
 import About from "./component/pages/About";
@@ -6,6 +6,8 @@ import Contact from "./component/pages/Contact";
 import Delivery from "./component/pages/Delivery";
 import Category from "./component/pages/Category";
 import NotFound from "./component/pages/NotFound";
+
+import { categories } from "./firebase";
 
 export default function App(){
   return(
@@ -22,5 +24,5 @@ export default function App(){
         </Routes>
       </Layout>
     </div>
-  )
+  );
 };

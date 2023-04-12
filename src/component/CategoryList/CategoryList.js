@@ -10,7 +10,7 @@ export default function CategoryList() {
   // получить документы из списка категорий в Firebase.
   useEffect(() => {
     getDocs(categories).then(snapshot => {
-      const newCategoryList = [];
+      const newCategoryList = []; 
       snapshot.docs.forEach(doc => {
         const category = doc.data(); // { name: "...", slug: "..." }
         category.id = doc.id;

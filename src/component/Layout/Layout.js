@@ -3,7 +3,7 @@ import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
 import "./Layout.css";
 
-function Layout(props) {
+export default function Layout(props) {
   return (
     <div className="Layout">
       <header>
@@ -20,5 +20,3 @@ function Layout(props) {
     </div>
   );
 }
-
-export default Layout;
