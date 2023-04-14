@@ -7,12 +7,12 @@ export default function ProductList() {
   const { products } = useContext(AppContext);
 
   const output = products.map((product) =>(
-    <div>
+    <div key={product.id} className="Product">
       <img src={product.picture} alt={product.name} />
-      <NavLink to={'/product/' + product.slug}>
+      <NavLink to={'/products/' + product.slug}>
         {product.name}
       </NavLink>
-      <span>{product.price}</span>
+      <span>{product.price} som</span>
     </div>
   ));
 

@@ -11,7 +11,7 @@
 
 .NavLink:active{
   background: var(--c);
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .Logo {
@@ -34,7 +34,7 @@
 .NavLink {
   --b: 3px;   /* border thickness */
   --s: .15em; /* size of the corner */
-  --c: #BD5532;
+  --c: #000000;
   
   padding: calc(.05em + var(--s)) calc(.3em + var(--s));
   color: var(--c);
@@ -50,7 +50,7 @@
 
 .Nav a {
   text-decoration: none;
-  color: rgb(92, 91, 91);
+  color: rgb(102, 102, 102);
   font-weight: bold;
   margin-left: 130px;
 }
