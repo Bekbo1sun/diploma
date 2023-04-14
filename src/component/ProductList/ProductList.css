@@ -51,6 +51,18 @@
   animation: fadeInUp 1s ease-in-out;
 }
 
+@media only screen and (max-width: 768px) {
+  .Product {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Product {
+    width: 100%;
+  }
+}
+
 .Product:hover {
   box-shadow: 8px 8px 14px rgba(0, 0, 0);
 }
