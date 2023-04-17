@@ -57,6 +57,6 @@
   margin-left: 130px;
 }
 
-.Nav .active {
-  color: rgb(0, 0, 0);
+.Nav a:active {
+  color: rgb(255, 255, 255);
 }
