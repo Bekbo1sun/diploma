@@ -1,0 +1,8 @@
+.CartList .CartItem {
+  display: flex;
+  align-items: center;
+}
+.CartList .CartItem img {
+  width: 300px;
+  height: 300px;
+}
