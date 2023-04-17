@@ -1,6 +1,6 @@
 .Nav {
   display: flex;
-}
+} 
 
 .NavLink:hover,
 .NavLink:focus-visible{
@@ -31,9 +31,10 @@
 .Nav .NavItem {
   margin: 0 10px;
 }
+
 .NavLink {
-  --b: 3px;   /* border thickness */
-  --s: .15em; /* size of the corner */
+  --b: 3px;
+  --s: .15em;
   --c: #000000;
   
   padding: calc(.05em + var(--s)) calc(.3em + var(--s));
