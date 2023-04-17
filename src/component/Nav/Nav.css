@@ -1,12 +1,13 @@
 .Nav {
   display: flex;
+  padding: 5px;
 } 
 
 .NavLink:hover,
 .NavLink:focus-visible{
   --_p: 0px;
   outline-color: var(--c);
-  outline-offset: .05em;
+  outline-offset: .1.1em;
 }
 
 .NavLink:active{
