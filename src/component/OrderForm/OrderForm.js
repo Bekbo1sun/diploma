@@ -3,7 +3,7 @@ import "./OrderForm.css";
 import { ordersCollection } from "../../firebase";
 import { useContext } from "react";
 import { AppContext } from "../../App";
-import { navigate, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export default function OrderForm() {
   const { cart, setCart } = useContext(AppContext);
