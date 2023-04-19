@@ -23,7 +23,13 @@ export const AppContext = createContext({
 export default function App(){
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState({});
+  const [cart, setCart] = useState(() => {
+    return JSON.parse(localStorage.getItem('cart')) || {};
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   useEffect(() => { // выполнить только однажды
     getDocs(categoryCollection) // получить категории
