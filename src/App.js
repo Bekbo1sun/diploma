@@ -8,7 +8,11 @@ import Category from "./component/pages/Category";
 import NotFound from "./component/pages/NotFound";
 import { createContext, useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore/lite";
-import { categoryCollection, productsCollection } from "./firebase";
+import {
+  categoryCollection,
+  onAuthChange,
+  productsCollection,
+} from "./firebase";
 import Product from "./component/pages/Product";
 import Cart from "./component/pages/Cart";
 import ThankYou from "./component/pages/ThankYou";
@@ -19,44 +23,60 @@ export const AppContext = createContext({
   // контекст для корзины
   cart: {}, // содержимое корзины
   setCart: () => {}, // изменить содержимое корзинки
+
+  user: null,
 });
-  
-export default function App(){
+
+export default function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState(() => {
-    return JSON.parse(localStorage.getItem('cart')) || {};
+    return JSON.parse(localStorage.getItem("cart")) || {};
   });
 
+  const [user, setUser] = useState(null);
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  useEffect(() => { // выполнить только однажды
+  useEffect(() => {
+    // выполнить только однажды
     getDocs(categoryCollection) // получить категории
-      .then(({ docs }) => { // когда категории загрузились
-        setCategories( // обновить состояние
-          docs.map(doc => ({ // новый массив
+      .then(({ docs }) => {
+        // когда категории загрузились
+        setCategories(
+          // обновить состояние
+          docs.map((doc) => ({
+            // новый массив
             ...doc.data(), // из свойств name,slug
-            id: doc.id // и свойства id
+            id: doc.id, // и свойства id
           }))
-        )
+        );
       });
 
     getDocs(productsCollection) // получить категории
-      .then(({ docs }) => { // когда категории загрузились
-        setProducts( // обновить состояние
-          docs.map(doc => ({ // новый массив
+      .then(({ docs }) => {
+        // когда категории загрузились
+        setProducts(
+          // обновить состояние
+          docs.map((doc) => ({
+            // новый массив
             ...doc.data(), // из свойств name,slug
-            id: doc.id // и свойства id
+            id: doc.id, // и свойства id
           }))
-        )
+        );
       });
+
+    onAuthChange((user) => {
+      setUser(user);
+    });
   }, []);
 
-  return(
+  return (
     <div className="App">
-      <AppContext.Provider value={{ categories, products, cart, setCart }}>
+      <AppContext.Provider
+        value={{ categories, products, cart, setCart, user, setUser }}
+      >
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -74,4 +94,4 @@ export default function App(){
       </AppContext.Provider>
     </div>
   );
-};
+}

@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection } from 'firebase/firestore/lite';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, onAuthStateChanged } from 'firebase/auth';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -29,3 +29,4 @@ export const ordersCollection = collection(db, 'orders');
 const provider = new GoogleAuthProvider();
 export const signIn = () => auth.signInWithPropup(auth, provider);
 export const signOut = () => signOut();
+export const onAuthChange = (callback) => onAuthStateChanged(auth, callback);
