@@ -5,18 +5,11 @@ import { useContext, useState } from "react";
 import { AppContext } from "../../App";
 import { useNavigate } from "react-router";
 
-const countryCodes = [
-  { code: "+996", country: "Kyrgyzstan" },
-  { code: "+7", country: "Russia" },
-  { code: "+7 6", country: "Kazakhstan" },
-  { code: "+998", country: "Uzbekistan" },
-];
-
 export default function OrderForm() {
   const { cart, setCart } = useContext(AppContext);
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-  const [countryCode, setCountryCode] = useState("+996");
+  const [countryCode, setCountryCode] = useState("+996"); // добавлено состояние для кода республики
 
   if (Object.keys(cart).length === 0) {
     return "Your cart is empty.";
@@ -29,7 +22,7 @@ export default function OrderForm() {
 
     addDoc(ordersCollection, {
       name: formData.get("name"),
-      phone: countryCode + formData.get("phone"),
+      phone: countryCode + formData.get("phone"), // добавлен код республики к номеру телефона
       email: formData.get("email"),
       password: formData.get("password"),
       address: formData.get("address"),
@@ -44,7 +37,7 @@ export default function OrderForm() {
     setShowPassword(!showPassword);
   }
 
-  function onPhoneInputChange(event) {
+  function onPhoneInputChange(event) { // добавлена функция обработки изменения поля ввода телефона
     const { value } = event.target;
     if (value.startsWith("+")) {
       setCountryCode(value);
@@ -61,16 +54,11 @@ export default function OrderForm() {
       </label>
       <label>
         Phone:{" "}
-        <select name="countryCode" value={countryCode} onChange={(e) => setCountryCode(e.target.value)}>
-          {countryCodes.map(({ code, country }) => (
-            <option key={code} value={code}>{`${country} (${code})`}</option>
-          ))}
-        </select>
         <input
           type="tel"
           name="phone"
           required
-          value={countryCode === "" ? "" : countryCode.slice(1)}
+          value={countryCode}
           onChange={onPhoneInputChange}
         />
       </label>
