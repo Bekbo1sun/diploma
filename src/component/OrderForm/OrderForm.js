@@ -5,10 +5,18 @@ import { useContext, useState } from "react";
 import { AppContext } from "../../App";
 import { useNavigate } from "react-router";
 
+const countryCodes = [
+  { code: "+996", country: "Kyrgyzstan" },
+  { code: "+7", country: "Russia" },
+  { code: "+7 6", country: "Kazakhstan" },
+  { code: "+998", country: "Uzbekistan" },
+];
+
 export default function OrderForm() {
   const { cart, setCart } = useContext(AppContext);
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false); // добавлено состояние
+  const [showPassword, setShowPassword] = useState(false);
+  const [countryCode, setCountryCode] = useState("+996");
 
   if (Object.keys(cart).length === 0) {
     return "Your cart is empty.";
@@ -20,22 +28,29 @@ export default function OrderForm() {
     const formData = new FormData(event.target);
 
     addDoc(ordersCollection, {
-      name: formData.get('name'),
-      phone: formData.get('phone'),
-      email: formData.get('email'),
-      password: formData.get('password'),
-      address: formData.get('address'),
+      name: formData.get("name"),
+      phone: countryCode + formData.get("phone"),
+      email: formData.get("email"),
+      password: formData.get("password"),
+      address: formData.get("address"),
       cart: cart,
-    })
-    .then(doc => {
+    }).then((doc) => {
       setCart({});
-      navigate('/thank-you');
-    })
+      navigate("/thank-you");
+    });
   }
 
-  // удалена строка с вызовом querySelector
-  function togglePasswordVisibility() { // добавлена функция обработки клика на кнопке "Show Password"
+  function togglePasswordVisibility() {
     setShowPassword(!showPassword);
+  }
+
+  function onPhoneInputChange(event) {
+    const { value } = event.target;
+    if (value.startsWith("+")) {
+      setCountryCode(value);
+    } else {
+      setCountryCode("");
+    }
   }
 
   return (
@@ -45,15 +60,36 @@ export default function OrderForm() {
         Name: <input type="text" name="name" required />
       </label>
       <label>
-        Phone: <input type="tel" name="phone" required />
+        Phone:{" "}
+        <select name="countryCode" value={countryCode} onChange={(e) => setCountryCode(e.target.value)}>
+          {countryCodes.map(({ code, country }) => (
+            <option key={code} value={code}>{`${country} (${code})`}</option>
+          ))}
+        </select>
+        <input
+          type="tel"
+          name="phone"
+          required
+          value={countryCode === "" ? "" : countryCode.slice(1)}
+          onChange={onPhoneInputChange}
+        />
       </label>
       <label>
         Email: <input type="email" name="email" required />
       </label>
       <label>
-        Password: <input type={showPassword ? "text" : "password"} name="password" required />
-        <button type="button" className="show-hide-password-button" onClick={togglePasswordVisibility}>
-          {showPassword ? 'Hide Password' : 'Show Password'}
+        Password:{" "}
+        <input
+          type={showPassword ? "text" : "password"}
+          name="password"
+          required
+        />
+        <button
+          type="button"
+          className="show-hide-password-button"
+          onClick={togglePasswordVisibility}
+        >
+          {showPassword ? "Hide Password" : "Show Password"}
         </button>
       </label>
       <label>
