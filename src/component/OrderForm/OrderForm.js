@@ -5,11 +5,18 @@ import { useContext, useState } from "react";
 import { AppContext } from "../../App";
 import { useNavigate } from "react-router";
 
+const countryCodes = [
+  { code: "+996", country: "Kyrgyzstan" },
+  { code: "+7", country: "Russia" },
+  { code: "+76", country: "Kazakhstan" },
+  { code: "+998", country: "Uzbekistan" },
+];
+
 export default function OrderForm() {
   const { cart, setCart } = useContext(AppContext);
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-  const [countryCode, setCountryCode] = useState("+996"); // добавлено состояние для кода республики
+  const [countryCode, setCountryCode] = useState("+996 ");
 
   if (Object.keys(cart).length === 0) {
     return "Your cart is empty.";
@@ -22,7 +29,7 @@ export default function OrderForm() {
 
     addDoc(ordersCollection, {
       name: formData.get("name"),
-      phone: countryCode + formData.get("phone"), // добавлен код республики к номеру телефона
+      phone: countryCode + formData.get("phone"),
       email: formData.get("email"),
       password: formData.get("password"),
       address: formData.get("address"),
@@ -37,10 +44,10 @@ export default function OrderForm() {
     setShowPassword(!showPassword);
   }
 
-  function onPhoneInputChange(event) { // добавлена функция обработки изменения поля ввода телефона
+  function onPhoneInputChange(event) {
     const { value } = event.target;
-    if (value.startsWith("+")) {
-      setCountryCode(value);
+    if (value.startsWith(countryCode)) {
+      setCountryCode(value.slice(0, countryCode.length));
     } else {
       setCountryCode("");
     }
@@ -54,11 +61,17 @@ export default function OrderForm() {
       </label>
       <label>
         Phone:{" "}
+        <select name="countryCode" value={countryCode} onChange={(e) => setCountryCode(e.target.value)}>
+          {countryCodes.map(({ code, country }) => (
+            <option key={code} value={code}>{`${country} (${code})`}</option>
+          ))}
+        </select>
         <input
           type="tel"
           name="phone"
           required
-          value={countryCode}
+          pattern="[0-9]{7,15}"
+          value={countryCode === "" ? "" : countryCode}
           onChange={onPhoneInputChange}
         />
       </label>
