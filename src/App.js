@@ -11,15 +11,18 @@ import { getDocs } from "firebase/firestore/lite";
 import {
   categoryCollection,
   onAuthChange,
+  ordersCollection,
   productsCollection,
 } from "./firebase";
 import Product from "./component/pages/Product";
 import Cart from "./component/pages/Cart";
 import ThankYou from "./component/pages/ThankYou";
+import Orders from "./component/pages/Orders";
 
 export const AppContext = createContext({
   categories: [],
   products: [],
+  orders: [],
   // контекст для корзины
   cart: {}, // содержимое корзины
   setCart: () => {}, // изменить содержимое корзинки
@@ -30,6 +33,7 @@ export const AppContext = createContext({
 export default function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [orders, setOrders] = useState([]);
   const [cart, setCart] = useState(() => {
     return JSON.parse(localStorage.getItem("cart")) || {};
   });
@@ -67,6 +71,19 @@ export default function App() {
         );
       });
 
+    getDocs(ordersCollection) // получить категории
+      .then(({ docs }) => {
+        // когда категории загрузились
+        setOrders(
+          // обновить состояние
+          docs.map((doc) => ({
+            // новый массив
+            ...doc.data(), // из свойств name,slug
+            id: doc.id, // и свойства id
+          }))
+        );
+      });
+
     onAuthChange((user) => {
       setUser(user);
     });
@@ -75,7 +92,7 @@ export default function App() {
   return (
     <div className="App">
       <AppContext.Provider
-        value={{ categories, products, cart, setCart, user, setUser }}
+        value={{ categories, products, cart, setCart, user, orders }}
       >
         <Layout>
           <Routes>
@@ -87,6 +104,7 @@ export default function App() {
             <Route path="/categories/:slug" element={<Category />} />
             <Route path="/products/:slug" element={<Product />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/orders" element={<Orders />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
