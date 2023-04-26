@@ -11,6 +11,10 @@
   padding-top: 10px;
 }
 
+.Layout .logo img {
+  margin-left: 75px;
+}
+
 .Layout header {
   grid-area: header;
   display: flex;
