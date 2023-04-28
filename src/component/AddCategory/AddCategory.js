@@ -43,7 +43,8 @@ const AddCategory = () => {
         size="15"
         type="text" 
         placeholder="Category name" 
-        onAbort={onChangeCategory} 
+        onChange={onChangeCategory} 
+        value={category}
       />
       <button onClick={onAddCategory}>+</button>
     </div>
