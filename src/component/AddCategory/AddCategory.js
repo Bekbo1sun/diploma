@@ -30,7 +30,7 @@ const AddCategory = () => {
     addDoc(categoryCollection, {
       name: category.trim(),
       slug: category.trim()
-        .replace(" ", " ")
+        .replaceAll(" ", " ")
         .toLocaleLowerCase(),
     }).then(() => {
       setCategory("");
