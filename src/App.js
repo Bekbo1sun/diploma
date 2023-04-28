@@ -73,6 +73,10 @@ export default function App() {
       });
 
     onAuthChange((user) => {
+      if (user) {
+        user.isAdmin = user.email === "bekbolsunzarmamatov@gmail.com";
+      }
+      
       setUser(user);
     });
   }, []);
