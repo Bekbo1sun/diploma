@@ -1,4 +1,6 @@
+import { addDoc } from "firebase/firestore/lite";
 import { useState } from "react";
+import { categoryCollection } from "../../firebase";
 import "./AddCategory.css";
 
 const AddCategory = () => {
@@ -9,8 +11,22 @@ const AddCategory = () => {
   }
 
   function onAddCategory() {
+    const name = category.trim();
 
+    if (name.length < 5) {
+      alert("Please provide a category name with minimum length of 5 characters.");
+    }
+
+    addDoc(categoryCollection, {
+      name: category.trim(),
+      slug: category.trim(),
+        .replace(" ", " ")
+        .toLocaleLowerCase(),
+    }).then(() => {
+      setCategory("");
+    });
   }
+
   return (
     <div className="AddCategory">
       <input 
