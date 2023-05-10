@@ -7,12 +7,11 @@ import Delivery from "./component/pages/Delivery";
 import Category from "./component/pages/Category";
 import NotFound from "./component/pages/NotFound";
 import { createContext, useEffect, useState } from "react";
-import { getDocs } from "firebase/firestore";
 import {
   onAuthChange,
   onCategoriesLoad,
-  ordersCollection,
-  productsCollection,
+  onOrdersLoad,
+  onProductsLoad,
 } from "./firebase";
 import Product from "./component/pages/Product";
 import Cart from "./component/pages/Cart";
@@ -45,38 +44,14 @@ export default function App() {
 
   useEffect(() => {
     onCategoriesLoad(setCategories);
-
-    getDocs(productsCollection) // получить категории
-      .then(({ docs }) => {
-        // когда категории загрузились
-        setProducts(
-          // обновить состояние
-          docs.map((doc) => ({
-            // новый массив
-            ...doc.data(), // из свойств name,slug
-            id: doc.id, // и свойства id
-          }))
-        );
-      });
-
-    getDocs(ordersCollection) // получить категории
-      .then(({ docs }) => {
-        // когда категории загрузились
-        setOrders(
-          // обновить состояние
-          docs.map((doc) => ({
-            // новый массив
-            ...doc.data(), // из свойств name,slug
-            id: doc.id, // и свойства id
-          }))
-        );
-      });
+    onProductsLoad(setProducts)
+    onOrdersLoad(setOrders)
 
     onAuthChange((user) => {
       if (user) {
         user.isAdmin = user.email === "bekbolsunzarmamatov@gmail.com";
       }
-      
+
       setUser(user);
     });
   }, []);
