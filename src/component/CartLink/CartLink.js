@@ -12,7 +12,8 @@ export default function CartLink() {
   return (
     <div className="CartLink">
       <NavLink to="/cart">
-        Cart ({total})
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-cart.svg" alt="cart"></img>
+        {total}
       </NavLink>
     </div>
   );
