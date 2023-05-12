@@ -1,0 +1,119 @@
+.Auth {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.img-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 120px;
+  text-align: left;
+  display: none;
+}
+
+.img-container:hover .img-menu {
+  display: block;
+}
+
+.img-menu a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.img-menu p {
+  color: #999;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.LogOut-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LogOut-img .img-container {
+  margin-right: 10px;
+}
+
+.LogOut-img button {
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+button {
+  cursor: pointer;
+}
+.Auth .S-Out-Btn {
+  background-color: rgb(171, 33, 33);
+}
+.Auth .Btn-s {
+  justify-content: space-between;
+  display: flex;
+}
+
+.img-container img {
+  width: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.LogOut-img img {
+  width: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  background-color: #666666;
+  padding: 10px;
+  border: 1px solid black;
+  transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+}
+
+.img-menu p {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.img-container:hover .img-menu {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.LogOut-img img {
+  filter: invert(0);
+}
+.LogOut-img img:hover {
+  filter: drop-shadow(2px 4px 6px black);
+}
+.LogOut-img img:focus {
+  filter: invert(0);
+}
