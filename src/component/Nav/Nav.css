@@ -45,7 +45,7 @@
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: .2em;
-  padding: 10px 25px;
+  padding: 9px 25px;
 }
 
 .Nav a {
