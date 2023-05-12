@@ -1,64 +1,3 @@
-.Auth {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.img-container {
-  position: relative;
-  display: inline-block;
-}
-
-.img-menu {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  z-index: 1;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  min-width: 120px;
-  text-align: left;
-  display: none;
-}
-
-.img-container:hover .img-menu {
-  display: block;
-}
-
-.img-menu a {
-  display: block;
-  color: #333;
-  text-decoration: none;
-  padding: 5px 0;
-}
-
-.img-menu p {
-  color: #999;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.LogOut-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.LogOut-img .img-container {
-  margin-right: 10px;
-}
-
-.LogOut-img button {
-  margin-left: 10px;
-}
-
-
-
-
-
-
-
-
 button {
   cursor: pointer;
 }
@@ -73,6 +12,7 @@ button {
 .img-container img {
   width: 50px;
   border-radius: 25px;
+  display: flex;
   cursor: pointer;
 }
 
