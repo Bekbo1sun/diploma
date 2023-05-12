@@ -1,0 +1,11 @@
+.CartLink {
+  align-items: center;
+}
+.CartLink a {
+  display: flex;
+  align-items: center;
+}
+.CartLink img {
+  filter: invert(3);
+  width: 50px;
+}
