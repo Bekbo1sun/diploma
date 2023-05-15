@@ -1,0 +1,33 @@
+.section-about {
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 26px;
+}
+
+.section-description {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.values-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.values-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.value-item {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
