@@ -27,13 +27,9 @@
   padding: 10px;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 22px;
 }
-/* 
-.Nav .NavItem {
-  margin: 0 5px;
-} */
 
 .NavLink {
   --b: 3px;
