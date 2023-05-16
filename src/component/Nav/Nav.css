@@ -1,7 +1,9 @@
 .Nav {
   display: flex;
   padding: 5px;
+  width: calc(100% - 330px);
 } 
+
 
 .NavLink:hover,
 .NavLink:focus-visible{
@@ -24,12 +26,14 @@
   list-style: none;
   padding: 10px;
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   font-size: 22px;
 }
-
+/* 
 .Nav .NavItem {
   margin: 0 5px;
-}
+} */
 
 .NavLink {
   --b: 3px;
@@ -52,7 +56,6 @@
   text-decoration: none;
   color: rgb(102, 102, 102);
   font-weight: bold;
-  margin-left: 126px;
 }
 
 .Nav a:active {
