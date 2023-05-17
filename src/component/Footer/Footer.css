@@ -39,11 +39,20 @@
   margin-top: 10px;
 }
 
+.footer-social-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .footer-contact-item,
 .footer-social-item {
   margin-bottom: 5px;
   font-size: 17px;
   font-weight: 500;
+}
+
+.footer-social-item i {
+  font-size: 33px;
 }
 
 .footer-bottom {
