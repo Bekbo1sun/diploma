@@ -61,7 +61,7 @@ export default function TechnicalSupport () {
       </p>
 
       <ul>
-        <li onClick={handlePhoneClick}>Phone: +996(552)-00-57-53</li>
+        <li onClick={(handlePhoneClick)}>Phone: +996(552)-00-57-53</li>
         <li>Email: bekbolsunzarmamatov@gmail.com</li>
         <li>
           Online Contact Form: <a href="https://example.com/contact">Contact Us</a>
