@@ -1,3 +1,4 @@
+import { FaPhone, FaEnvelope, FaUser } from 'react-icons/fa';
 import React from 'react';
 import "./TechnicalSupport.css";
 
@@ -61,10 +62,14 @@ export default function TechnicalSupport () {
       </p>
 
       <ul>
-        <li onClick={(handlePhoneClick)}>Phone: +996(552)-00-57-53</li>
-        <li>Email: bekbolsunzarmamatov@gmail.com</li>
+        <li onClick={handlePhoneClick}>
+          <FaPhone /> +996(552)-00-57-53
+        </li>
         <li>
-          Online Contact Form: <a href="https://example.com/contact">Contact Us</a>
+          <FaEnvelope /> bekbolsunzarmamatov@gmail.com
+        </li>
+        <li>
+          <FaUser /> <a href="https://example.com/contact">Contact Us</a>
         </li>
       </ul>
     </div>
