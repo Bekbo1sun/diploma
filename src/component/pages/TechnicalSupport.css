@@ -1,17 +1,19 @@
 .Technical-Support {
   max-width: 800px;
-  margin-left: 10px;
+  padding-top: 13px;
+  margin-left: 26px;
 }
 
 .Technical-Support h2{
   display: flex;
   justify-content: center;
+  font-variant-caps: petite-caps;
+  font-size: 26px;
 }
 
-.Technical-Support h2, h3 {
+.Technical-Support h3 {
   font-variant-caps: petite-caps;
   font-size: 22px;
-  text-decoration: underline;
 }
 
 p {
