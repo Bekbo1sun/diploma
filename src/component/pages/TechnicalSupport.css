@@ -11,6 +11,7 @@
 .Technical-Support h2, h3 {
   font-variant-caps: petite-caps;
   font-size: 22px;
+  text-decoration: underline;
 }
 
 p {
