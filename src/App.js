@@ -3,7 +3,7 @@ import Layout from "./component/Layout/Layout";
 import Home from "./component/pages/Home";
 import About from "./component/pages/About";
 import Contacts from "./component/pages/Contacts";
-import Delivery from "./component/pages/Delivery";
+import TechnicalSupport from "./component/pages/TechnicalSupport";
 import Category from "./component/pages/Category";
 import NotFound from "./component/pages/NotFound";
 import { createContext, useEffect, useState } from "react";
@@ -67,7 +67,7 @@ export default function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contacts />} />
-            <Route path="/delivery" element={<Delivery />} />
+            <Route path="/technical-support" element={<TechnicalSupport />} />
             <Route path="/categories/:slug" element={<Category />} />
             <Route path="/products/:slug" element={<Product />} />
             <Route path="/thank-you" element={<ThankYou />} />
