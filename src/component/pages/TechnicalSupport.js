@@ -61,17 +61,17 @@ export default function TechnicalSupport () {
         answers to your questions:
       </p>
 
-      <ul>
-        <li onClick={handlePhoneClick}>
-          <FaPhone /> +996(552)-00-57-53
-        </li>
-        <li>
-          <FaEnvelope /> bekbolsunzarmamatov@gmail.com
-        </li>
-        <li>
-          <FaUser /> <a href="https://example.com/contact">Contact Us</a>
-        </li>
-      </ul>
+        <ul className="Links">
+          <li onClick={handlePhoneClick}>
+            <FaPhone /><a href="https://web.whatsapp.com/"> +996(552)-00-57-53</a>
+          </li>
+          <li>
+            <FaEnvelope /><a href="https://mail.google.com/"> bekbolsunzarmamatov@gmail.com</a>
+          </li>
+          <li>
+            <FaUser /><a href="https://example.com/contact"> Contact Us</a>
+          </li>
+        </ul>
     </div>
   );
 };
