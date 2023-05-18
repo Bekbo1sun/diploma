@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./Nav.css";
+import "./NavLast.css";
 
 export default function NavLast() {
   return (
