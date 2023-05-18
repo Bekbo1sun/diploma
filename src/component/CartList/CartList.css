@@ -1,24 +1,48 @@
-.CartList .CartItem {
+.CartList {
   display: flex;
-  align-items: center;
-}
-.CartList .CartItem img {
-  width: 300px;
-  height: 300px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-button {
-  background-color: #007bff;
+.CartItem {
+  width: 300px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.CartItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.CartItem a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.CartItem input[type="number"] {
+  width: 50px;
+}
+
+.CartItem span {
+  font-weight: bold;
+}
+
+.CartItem button {
+  background-color: #ff4444;
   color: #fff;
   border: none;
-  border-radius: 4px;
   padding: 8px 16px;
-  font-size: 16px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
 }
 
-button:hover {
-  background-color: #0056b3;
+.CartItem button:hover {
+  background-color: #cc0000;
 }
-
