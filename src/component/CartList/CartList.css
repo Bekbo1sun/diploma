@@ -2,40 +2,54 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  flex-direction: column;
+  font-variant-caps: petite-caps;
+  margin-left: 10px;
 }
+
 
 .CartItem {
-  width: 300px;
-  background-color: #f2f2f2;
+  width: calc(100% - 300px);
+  background-color: #c4c4c4;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 10px 12px 18px #000;
+
+  display: flex;
+  margin-bottom: 40px;
 }
 
+img {
+  border-radius: 150px;
+}
 .CartItem img {
-  width: 100%;
+  border: 2px solid #000;
+  padding: 5px;
+  width: 300px;
   height: auto;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
-.CartItem a {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-  margin-bottom: 10px;
+.CartItem .Card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.CartItem .Card-content a {
+  margin-bottom: 5px;
+}
+
 
 .CartItem input[type="number"] {
-  width: 50px;
-}
-
-.CartItem span {
-  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 14px 0 14px 0;
 }
 
 .CartItem button {
-  background-color: #ff4444;
+  background-color: #0d5c1a;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -43,6 +57,10 @@
   cursor: pointer;
 }
 
+.CartItem span {
+  font-weight: bold;
+}
+
 .CartItem button:hover {
-  background-color: #cc0000;
+  background-color: #000000;
 }
