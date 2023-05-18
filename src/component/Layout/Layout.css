@@ -17,6 +17,16 @@
   align-items: center;
 }
 
+@media (max-width: 960px) {
+  .Layout header {
+    justify-content: space-between;
+  }
+}
+
+.Layout header ul {
+  display: flex;
+}
+
 .Layout aside {
   grid-area: aside;
 }
