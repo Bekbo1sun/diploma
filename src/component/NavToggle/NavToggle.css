@@ -11,7 +11,8 @@
   margin: 5px;
   background-color: #0b1c2c;
 }
-@media (max-width: 960px) {
+
+@media (max-width: 1030px) {
   .NavToggle {
     display: inline-block;
   }
