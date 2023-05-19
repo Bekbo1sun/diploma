@@ -1,8 +1,9 @@
 .Layout {
   display: grid;
-  grid-template-areas: "header header"
-  "aside main"
-  "footer footer";
+  grid-template-areas:  
+    "header header"
+    "aside main"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
 
   max-width: 1366px;
@@ -17,7 +18,7 @@
   align-items: center;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1030px) {
   .Layout header {
     justify-content: space-between;
   }
@@ -41,4 +42,10 @@
 
 .Layout .logo {
   max-width: 150px;
+}
+
+@media (max-width: 1030px) {
+  .Layout header > .Nav {
+    display: none;
+  }
 }
