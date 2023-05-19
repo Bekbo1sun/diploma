@@ -1,8 +1,14 @@
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 import "./Footer.css";
 
 function Footer() {
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   return (
     <footer className="footer">
       <div className="container">
@@ -78,6 +84,11 @@ function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+          <div className="GoUp">
+            <Link href="#" onClick={scrollToTop}>
+              <i class="fa-solid fa-circle-arrow-up" ></i>
+            </Link>
           </div>
         </div>
       </div>
