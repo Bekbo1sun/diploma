@@ -37,6 +37,7 @@
   text-decoration: none;
   color: rgb(102, 102, 102);
   font-weight: bold;
+  font-size: 18px;
 }
 
 .NavLast a:active {
