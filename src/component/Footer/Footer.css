@@ -114,3 +114,14 @@
 .footer-column .footer-list li a:hover:after {
   transform: scaleX(1);
 }
+
+.Footer .GoUp {
+  width: 100%;
+  text-align: center;
+}
+.Footer .GoUp a {
+  text-decoration: none;
+}
+.GoUp Link i {
+  color: #000000;
+}
