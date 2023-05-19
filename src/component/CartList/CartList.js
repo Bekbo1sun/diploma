@@ -33,7 +33,6 @@ export default function CartList() {
         <img src={product.picture} alt={product.name} />
         <div className="Card-content">
           <Link to={"/product/" + product.slug}>{product.name}</Link>
-          {cart[product.id]}
           <input
             type="number"
             value={cart[product.id]}
