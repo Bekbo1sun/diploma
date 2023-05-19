@@ -49,6 +49,7 @@
 
 .NavItem-Last {
   display: flex;
+  padding: 30px;
 }
 
 .NavLink-Last {
