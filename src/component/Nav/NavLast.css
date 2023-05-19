@@ -13,6 +13,7 @@
 .NavUl-Last {
   font-size: 22px;
   height: 100%;
+  padding: 0;
 }
 
 .NavLink-Last {
