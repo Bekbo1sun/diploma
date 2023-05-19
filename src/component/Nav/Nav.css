@@ -2,12 +2,6 @@
   display: flex;
   padding: 5px;
   width: calc(100% - 330px);
-} 
-
-@media (max-width: 960px) {
-  .Nav {
-    display: none;
-  }
 }
 
 .NavLink:hover,
@@ -32,8 +26,8 @@
   padding: 10px;
   display: flex;
   width: 100%;
-  justify-content: space-around;
   font-size: 22px;
+  justify-content: space-evenly;
 }
 
 .NavLink {
