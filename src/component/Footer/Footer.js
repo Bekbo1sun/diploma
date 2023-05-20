@@ -58,6 +58,7 @@ function Footer() {
             <ul className="footer-social-list">
               <li className="footer-social-item">
                 <a
+                  className="facebook"
                   href="https://www.facebook.com/example"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -67,6 +68,7 @@ function Footer() {
               </li>
               <li className="footer-social-item">
                 <a
+                  className="instagram"
                   href="https://www.instagram.com/example"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -76,6 +78,7 @@ function Footer() {
               </li>
               <li className="footer-social-item">
                 <a
+                  className="twitter"
                   href="https://www.twitter.com/example"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -87,7 +90,7 @@ function Footer() {
           </div>
           <div className="GoUp">
             <Link href="#" onClick={scrollToTop}>
-              <i class="fa-solid fa-circle-arrow-up" ></i>
+              <i className="fa-solid fa-circle-arrow-up" ></i>
             </Link>
           </div>
         </div>
