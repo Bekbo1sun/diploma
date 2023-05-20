@@ -46,10 +46,59 @@ function Footer() {
           <div className="footer-section">
             <h3 className="footer-title">Contact Us</h3>
             <ul className="footer-contact-list">
-              <li className="footer-contact-item">Phone: +1 123 456 789</li>
-              <li className="footer-contact-item">Email: info@example.com</li>
               <li className="footer-contact-item">
-                Address: 123 Example Street, City
+                <a
+                  className="phone"
+                  href="tel:+996552005753"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Contact
+                </a>
+              </li>
+              <li className="footer-contact-item">
+                <a
+                  className="email"
+                  href="https://mail.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Gmail
+                </a>
+              </li>
+              <li className="footer-contact-item">
+                <a
+                  className="instagram"
+                  href="https://instagram.com/example"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Instagram
+                </a>
+              </li>
+              <li className="footer-contact-item">
+                <a
+                  className="twitter"
+                  href="https:/twitter.com/example"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Twitter
+                </a>
+              </li>
+              <li className="footer-contact-item">
+                <a
+                  className="facebook"
+                  href="https:/facebook.com/example"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Facebook
+                </a>
+              </li>
+              <li className="footer-contact-item">
+                <a
+                  className="adress"
+                  href="https://goo.gl/maps/aJ8unThpLjYmzB1W6"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Adress
+                </a>
               </li>
             </ul>
           </div>
