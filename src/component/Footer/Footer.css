@@ -56,6 +56,18 @@
   font-size: 33px;
 }
 
+.footer-social-item .facebook i {
+  color: blue;
+}
+
+.footer-social-item .instagram i {
+  color: red;
+}
+
+.footer-social-item .twitter i {
+  color: blue;
+}
+
 .footer-bottom {
   margin-top: 40px;
   background-color: #dfdfdf;
