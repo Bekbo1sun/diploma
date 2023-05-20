@@ -115,13 +115,28 @@
   transform: scaleX(1);
 }
 
-.Footer .GoUp {
-  width: 100%;
+.GoUp {
+  width: 25%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.Footer .GoUp a {
+
+.GoUp a {
   text-decoration: none;
 }
-.GoUp Link i {
-  color: #000000;
+
+.icons {
+  text-align: end;
+}
+
+.GoUp i {
+  font-size: 34px;
+  color: #000;
+  margin: 0 10px;
+}
+
+.GoUp i:hover {
+  color: rgb(0, 63, 5);
 }
