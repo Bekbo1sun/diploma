@@ -52,6 +52,39 @@
   font-weight: 500;
 }
 
+.footer-contact-item .phone {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-contact-item .email {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-contact-item .instagram {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-contact-item .twitter {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-contact-item .facebook {
+  text-decoration: none;
+  color: #000;
+}
+
+
+.footer-contact-item .adress {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
 .footer-social-item i {
   font-size: 33px;
 }
