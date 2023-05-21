@@ -22,8 +22,8 @@ function Footer() {
             </p>
           </div>
           
-          <div className="footer-column">
-            <h4 className="footer-heading">Menus</h4>
+          <div className="footer-column-menus">
+            <h4 className="footer-heading-menus">Menus</h4>
             <ul className="footer-list">
               <li>
                 <NavLink to="/">Home</NavLink>
@@ -43,10 +43,10 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="footer-section">
-            <h3 className="footer-title">Contact Us</h3>
-            <ul className="footer-contact-list">
-              <li className="footer-contact-item">
+          <div className="footer-column-contact">
+            <h4 className="footer-heading-contact">Contact Us</h4>
+            <ul className="footer-list">
+              <li>
                 <a
                   className="phone"
                   href="tel:+996552005753"
@@ -133,6 +133,16 @@ function Footer() {
                   rel="noopener noreferrer"
                 >
                   <i className="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li className="footer-social-item">
+                <a
+                  className="youtube"
+                  href="https://www.youtube.com/example"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-youtube"></i>
                 </a>
               </li>
             </ul>
