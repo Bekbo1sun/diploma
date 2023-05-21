@@ -33,6 +33,7 @@ export default function CartList() {
         <img src={product.picture} alt={product.name} />
         <div className="Card-content">
           <Link to={"/product/" + product.slug}>{product.name}</Link>
+          <span>{cart[product.id] * product.price} som</span>
           <div className="Adition">
             <button className="button-minus" onClick={() => onQuantityChange(product, cart[product.id] - 1)}>-</button>
             <input
@@ -43,7 +44,6 @@ export default function CartList() {
             />
             <button className="button-plus" onClick={() => onQuantityChange(product, cart[product.id] + 1)}>+</button>
           </div>
-          <span>{cart[product.id] * product.price} som</span>
           <button className="Remove" onClick={() => onItemRemove(product)}>Remove</button>
         </div>
       </div>
