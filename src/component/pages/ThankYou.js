@@ -1,7 +1,7 @@
 export default function ThankYou() {
 
   setTimeout(function () {
-    window.location.href = "https://bekbolsun.netlify.app/home";
+    window.location.href = "https://bekbolsun.netlify.app";
   }, 5000)
 
   window.onload = function() {
