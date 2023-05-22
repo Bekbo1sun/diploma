@@ -43,3 +43,12 @@
   background-color: rgb(90, 25, 25);
   color: rgb(238, 232, 232);
 }
+
+@media (max-width: 1245px) {
+  .CategoryList {
+    width: 50%;
+  }
+  .CategoryList h3 {
+    font-size: 26px;
+  }
+}
