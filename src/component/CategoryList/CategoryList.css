@@ -6,7 +6,6 @@
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   border: 1px rgba(8, 8, 8, 0.774) solid;
-  margin-top: 40px;
 }
 
 .CategoryList h3 {
@@ -14,6 +13,7 @@
   font-weight: bolder;
   text-align: center;
   margin-bottom: 20px;
+  font-variant-caps: petite-caps;
   color: rgb(0, 0, 0);
 }
 
@@ -23,20 +23,16 @@
   margin: 0;
 }
 
-.CategoryList li {
-  margin-bottom: 10px;
-  border: 1px rgb(158, 157, 157) solid;
-  border-radius: 8px;
-}
-
 .CategoryList li a {
   display: block;
+  text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  text-decoration: none;
-  color: #333;
+  color: rgb(0, 0, 0);
   transition: background-color 0.3s ease;
-  font-size: medium;
+  font-size: 24px;
+  font-weight: 600;
+  font-variant-caps: petite-caps;
 }
 
 .CategoryList li a:hover {
@@ -50,5 +46,28 @@
   }
   .CategoryList h3 {
     font-size: 26px;
+    font-variant-caps: petite-caps;
+  }
+}
+
+@media (max-width: 375px) {
+  .CategoryList {
+    width: 60%;
+    margin-left: 12px;
+    padding: 15px;
+  }
+  .CategoryList h3 {
+    font-size: 18px;
+    font-variant-caps: petite-caps;
+    font-weight: bolder;
+  }
+  .CategoryList li a {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 8px 0;
+  }
+  .CategoryList li a:hover {
+    background-color: rgb(90, 25, 25);
+    color: rgb(238, 232, 232);
   }
 }
