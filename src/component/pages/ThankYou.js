@@ -1,3 +1,5 @@
+import "./ThankYou.css";
+
 export default function ThankYou() {
 
   setTimeout(function () {
