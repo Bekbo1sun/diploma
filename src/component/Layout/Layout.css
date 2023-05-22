@@ -26,6 +26,7 @@
 
 .Layout header ul {
   display: flex;
+  margin-right: 20px;
 }
 
 .Layout aside {
@@ -42,10 +43,25 @@
 
 .Layout .logo {
   max-width: 150px;
+  margin-left: 12px;
 }
 
 @media (max-width: 1030px) {
   .Layout header > .Nav {
     display: none;
+  }
+  .Layout .logo {
+    width: 200px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .Layout header ul {
+    display: flex;
+    margin-right: 10px;
+  }
+  .Layout .logo {
+    width: 100px;
   }
 }
