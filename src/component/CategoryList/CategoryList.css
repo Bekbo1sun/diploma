@@ -12,8 +12,8 @@
   font-size: 36px;
   font-weight: bolder;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
   margin-bottom: 20px;
-  font-variant-caps: petite-caps;
   color: rgb(0, 0, 0);
 }
 
@@ -32,7 +32,6 @@
   transition: background-color 0.3s ease;
   font-size: 24px;
   font-weight: 600;
-  font-variant-caps: petite-caps;
 }
 
 .CategoryList li a:hover {
