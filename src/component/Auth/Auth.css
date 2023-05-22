@@ -14,6 +14,7 @@ button {
   border-radius: 25px;
   display: flex;
   cursor: pointer;
+  margin: 0 10px;
 }
 
 .LogOut-img img {
@@ -24,57 +25,10 @@ button {
 
 .img-container {
   position: relative;
-  padding: 0 18px;
 }
 
-.img-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  --b: 3px;
-  --s: .15em;
-  --c: #000000;
-  
-  padding: calc(.05em + var(--s)) calc(.3em + var(--s));
-  color: var(--c);
-  --_p: var(--s);
-  background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-  transition: .3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: .2em;
-  padding: 9px 25px;
-
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 120%;
-  left: -30px;
-  padding: 20px 18px;
-  transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
-}
-
-.img-menu p {
-  color: #f1f1f1;
-  cursor: pointer;
-}
-
-.img-container:hover .img-menu {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0s;
-}
-.LogOut-img img {
-  filter: invert(0);
-}
-.LogOut-img img:hover {
-  box-shadow: 4px 2px 9px;
-  filter: drop-shadow(2px 4px 6px black);
-}
-.LogOut-img img:focus {
-  filter: invert(0);
+@media (max-width: 375px) {
+  .img-container img {
+    margin: 0 3px;
+  }
 }
