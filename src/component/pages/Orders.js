@@ -1,4 +1,5 @@
 import OrderList from "../OrderList/OrderList";
+import "./Orders.css";
 
 export default function Orders() {
   return (
