@@ -18,15 +18,15 @@ const firebaseConfig = {
 
 // Инициализация приложения
 const app = initializeApp(firebaseConfig);
-// Инициализация базы данных\
+// Инициализация базы данных
 export const db = getFirestore(app);
 const auth = getAuth(app);
 export const storage = getStorage(app);
 
 // Получение списка категорий (коллекции документов)
-export const categoryCollection = collection(db, 'categories');
-export const productsCollection = collection(db, 'products');
-export const ordersCollection = collection(db, 'orders');
+export const categoryCollection = collection(db, "categories");
+export const productsCollection = collection(db, "products");
+export const ordersCollection = collection(db, "orders");
 
 const provider = new GoogleAuthProvider();
 export const logIn = () => signInWithPopup(auth, provider);
@@ -42,7 +42,6 @@ export const onCategoriesLoad = (callback) =>
       }))
     )
   );
-
 export const onProductsLoad = (callback) =>
   onSnapshot(productsCollection, (snapshot) =>
     callback(
@@ -52,7 +51,6 @@ export const onProductsLoad = (callback) =>
       }))
     )
   );
-
 export const onOrdersLoad = (callback) =>
   onSnapshot(ordersCollection, (snapshot) =>
     callback(
@@ -63,10 +61,14 @@ export const onOrdersLoad = (callback) =>
     )
   );
 
-export const uploadProductPhoto = async (file) => {
+// отправка фотографии и получение ее url
+export const uploadProductPhoto = (file) => {
   const storageRef = ref(storage, `products/${file.name}`);
-  await uploadBytes(storageRef, file);
-  
-  const url = await getDownloadURL(storageRef);
-  return url;
+  return uploadBytes(storageRef, file)
+    .then(() => {
+      return getDownloadURL(storageRef);
+    })
+    .catch((error) => {
+      console.log("Failed to upload product photo:", error);
+    });
 };
