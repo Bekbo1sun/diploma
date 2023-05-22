@@ -34,3 +34,31 @@
   font-size: 20px;
   margin-bottom: 10px;
 }
+
+.About h1 {
+  font-size: 30px;
+  margin: 25px 0 15px 10px;
+  font-variant-caps: petite-caps;
+  font-weight: 500;
+}
+
+@media (max-width: 375px) {
+  .About {
+    max-width: 190px;
+  }
+  .section-about {
+    margin: 0 auto;
+  }
+  .About h2 {
+    font-size: 18px;
+  }
+  .About p {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .About li {
+    font-size: 14px;
+    font-weight: normal;
+    list-style-type: number;
+  }
+}
