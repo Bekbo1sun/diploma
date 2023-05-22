@@ -72,7 +72,7 @@
 .Card-content span {
   font-weight: bold;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .CartItem .Remove:hover {
