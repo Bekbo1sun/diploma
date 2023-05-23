@@ -24,8 +24,12 @@ export default function ProductList({ category }) {
 
   return (
     <div className="ProductList">
-      {output}
-    <AddProduct category={category} />
+      <div className="ProductList-auth">
+        <AddProduct category={category} />
+      </div>
+      <div className="ProductList-cards">
+        {output}
+      </div>
     </div>
   );
 }
