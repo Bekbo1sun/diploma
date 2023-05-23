@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router";
 import Layout from "./component/Layout/Layout";
 import Home from "./component/pages/Home";
 import About from "./component/pages/About";
-import Contacts from "./component/pages/Contacts";
 import Category from "./component/pages/Category";
 import Support from "./component/pages/Support";
 import NotFound from "./component/pages/NotFound";
@@ -66,12 +65,11 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contacts />} />
+            <Route path="/orders" element={<Orders />} />
             <Route path="/support" element={<Support />} />
             <Route path="/categories/:slug" element={<Category />} />
             <Route path="/products/:slug" element={<Product />} />
             <Route path="/thank-you" element={<ThankYou />} />
-            <Route path="/orders" element={<Orders />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
