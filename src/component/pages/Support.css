@@ -60,3 +60,17 @@ p {
 .Links li a:hover:after {
   transform: scaleX(1);
 }
+
+.Support h1 {
+  font-size: 30px;
+  margin: 25px 0 15px 10px;
+  font-variant-caps: petite-caps;
+  font-weight: 500;
+}
+
+@media (max-width: 375px) {
+  .Support {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+}
