@@ -44,7 +44,7 @@
 
 @media (max-width: 375px) {
   .About {
-    max-width: 190px;
+    max-width: 150px;
   }
   .section-about {
     margin: 0 auto;
