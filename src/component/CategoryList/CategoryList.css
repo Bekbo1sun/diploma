@@ -41,10 +41,14 @@
 
 @media (max-width: 1245px) {
   .CategoryList {
-    width: 50%;
+    width: 70%;
   }
   .CategoryList h3 {
-    font-size: 26px;
+    font-size: 30px;
+    font-variant-caps: petite-caps;
+  }
+  .CategoryList li a {
+    font-size: 24px;
     font-variant-caps: petite-caps;
   }
 }
