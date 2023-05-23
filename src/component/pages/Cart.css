@@ -7,7 +7,7 @@
 
 @media (max-width: 375px) {
   .Cart {
-    max-width: 190px;
+    max-width: 150px;
     margin: 0 auto;
   }
   .Cart h1 {
