@@ -12,10 +12,10 @@ export default function NavLast() {
           <NavLink to="/about" className="NavLink-Last">About</NavLink>
         </li>
         <li className="NavItem-Last">
-          <NavLink to="/contact" className="NavLink-Last">Contact</NavLink>
+          <NavLink to="/orders" className="NavLink-Last">Orders</NavLink>
         </li>
         <li className="NavItem-Last">
-          <NavLink to="/technical-support" className="NavLink-Last">Technical Support</NavLink>
+          <NavLink to="/support" className="NavLink-Last">Support</NavLink>
         </li>
       </ul>
     </nav>

@@ -12,7 +12,7 @@ export default function Nav() {
           <NavLink to="/about" className="NavLink">About</NavLink>
         </li>
         <li className="NavItem">
-          <NavLink to="/contact" className="NavLink">Contact</NavLink>
+          <NavLink to="/orders" className="NavLink">Orders</NavLink>
         </li>
         <li className="NavItem">
           <NavLink to="/support" className="NavLink">Support</NavLink>
