@@ -1,9 +1,10 @@
 .Drawer .content {
   background-color: #fffffffa;
   color: white;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 5px 0 10px #000;
   width: 240px;
   overflow: hidden;
+  border-radius: 0 15px 15px 0;
 
   position: fixed;
   top: 0;
@@ -21,7 +22,7 @@
 }
 
 .Drawer .backdrop {
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .6);
 
   position: fixed;
   top: 0;
@@ -49,3 +50,10 @@
     width: 180px;
   }
 } 
+
+@media (max-width: 375px) {
+  .Drawer .content {
+    width: 160px;
+    border-radius: 0 15px 15px 0;
+  }
+}
