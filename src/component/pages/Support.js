@@ -1,15 +1,9 @@
-import { FaPhone, FaEnvelope, FaUser } from 'react-icons/fa';
-import React from 'react';
+import React from "react";
 import "./Support.css";
 
-export default function Support () {
-
-  const handlePhoneClick = () => {
-    window.location.href = 'tel:+996552005753';
-  };
-
+export default function Support() {
   return (
-    <div className='Support'>
+    <div className="Support">
       <h2>Delivery Information</h2>
 
       <h3>Delivery Schedule</h3>
@@ -54,24 +48,6 @@ export default function Support () {
         necessary information about the process and assist you with returning or
         exchanging the product.
       </p>
-
-      <h3>Contact Information</h3>
-      <p>
-        You can contact us for additional information about delivery or to get
-        answers to your questions:
-      </p>
-
-        <ul className="Links">
-          <li onClick={handlePhoneClick}>
-            <FaPhone /><a href="https://web.whatsapp.com/"> +996(552)-00-57-53</a>
-          </li>
-          <li>
-            <FaEnvelope /><a href="https://mail.google.com/"> bekbolsunzarmamatov@gmail.com</a>
-          </li>
-          <li>
-            <FaUser /><a href="https://example.com/contact"> Contact Us</a>
-          </li>
-        </ul>
     </div>
   );
-};
+}
