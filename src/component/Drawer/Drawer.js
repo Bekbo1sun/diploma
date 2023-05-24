@@ -1,9 +1,16 @@
 import NavLast from "../Nav/NavLast";
-import "./Drawer.css"
+import "./Drawer.css";
 
 function Drawer({ open, toggle }) {
   const drawerClassNames = `Drawer ${open ? "open" : ""}`;
-
+  let menuBtn = document.querySelectorAll(".NavItem a");
+  let menu = document.querySelector(".Drawer");
+  menuBtn.forEach((el) => {
+    el.addEventListener("click", function () {
+      menu.classList.remove("open");
+    });
+  });
+  
   return (
     <div className={drawerClassNames}>
       <div onClick={toggle} className="backdrop"></div>
@@ -14,4 +21,4 @@ function Drawer({ open, toggle }) {
   );
 }
 
-export default Drawer; 
+export default Drawer;
