@@ -1,23 +1,31 @@
 import { NavLink } from "react-router-dom";
 import "./NavLast.css";
 
-export default function NavLast() {
+export default function NavTwo(props) {
+  const handleNavigationClick = () => {
+    if (props.onNavigationClick) {
+      props.onNavigationClick();
+    }
+  };
+
   return (
-    <nav className="NavLast">
-      <ul className="NavUl-Last">
-        <li className="NavItem-Last">
-          <NavLink to="/" className="NavLink-Last">Home</NavLink>
-        </li>
-        <li className="NavItem-Last">
-          <NavLink to="/about" className="NavLink-Last">About</NavLink>
-        </li>
-        <li className="NavItem-Last">
-          <NavLink to="/orders" className="NavLink-Last">Orders</NavLink>
-        </li>
-        <li className="NavItem-Last">
-          <NavLink to="/support" className="NavLink-Last">Support</NavLink>
-        </li>
-      </ul>
-    </nav>
-  )
-};
+    <div className="NavTwo">
+      <nav className="topbar-last-nav">
+        <ul>
+          <li className="NavItem" onClick={handleNavigationClick}>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li className="NavItem" onClick={handleNavigationClick}>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li className="NavItem" onClick={handleNavigationClick}>
+            <NavLink to="/orders">Orders</NavLink>
+          </li>
+          <li className="NavItem" onClick={handleNavigationClick}>
+            <NavLink to="/support">Support</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+}
