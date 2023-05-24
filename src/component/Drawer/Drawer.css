@@ -2,7 +2,7 @@
   background-color: #fffffffa;
   color: white;
   box-shadow: 0 0 10px #000;
-  width: 300px;
+  width: 240px;
   overflow: hidden;
 
   position: fixed;
@@ -15,6 +15,7 @@
   transition: transform .3s;
 
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -45,5 +46,6 @@
   }
   .Drawer .content {
     transform: translateX(-300px);
+    width: 180px;
   }
 } 
