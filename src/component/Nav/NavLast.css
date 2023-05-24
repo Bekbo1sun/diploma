@@ -48,3 +48,9 @@
 .topbar-last-nav a.active {
   font-weight: bold;
 }
+
+@media (max-width: 375px) {
+  .topbar-last-nav a {
+    font-size: 14px;
+  }
+}
