@@ -1,22 +1,34 @@
-.NavLink-Last:hover,
-.NavLink-Last:focus-visible{
+.topbar-last-nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.topbar-last-nav li {
+  margin-bottom: 50px;
+}
+
+.topbar-last-nav a:active{
+  background: var(--c);
+  color: rgb(255, 255, 255);
+}
+
+.topbar-last-nav a {
+  font-size: 20px;
+}
+
+.topbar-last-nav a:hover,
+.topbar-last-nav a:focus-visible{
   --_p: 0px;
   outline-color: var(--c);
   outline-offset: .1.1em;
 }
 
-.NavLink-Last:active{
-  background: var(--c);
-  color: rgb(255, 255, 255);
-}
+.topbar-last-nav a {
+  color: #000;
+  text-decoration: none;
 
-.NavUl-Last {
-  font-size: 22px;
-  height: 100%;
-  padding: 0;
-}
-
-.NavLink-Last {
   --b: 3px;
   --s: .15em;
   --c: #000000;
@@ -33,27 +45,6 @@
   padding: 9px 25px;
 }
 
-.NavLast a {
-  text-decoration: none;
-  color: rgb(102, 102, 102);
+.topbar-last-nav a.active {
   font-weight: bold;
-  font-size: 18px;
-}
-
-.NavLast a:active {
-  color: rgb(255, 255, 255);
-}
-
-.NavUl-Last {
-  flex-direction: column;
-}
-
-.NavItem-Last {
-  display: flex;
-  padding: 20px 30px;
-}
-
-.NavLink-Last {
-  color: #000;
-  text-decoration: none;
 }
