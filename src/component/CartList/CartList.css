@@ -7,12 +7,12 @@
 }
 
 .CartItem {
-  width: calc(100% - 40px);
+  width: calc(100% - 300px);
   background-color: #c4c4c4;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 10px 12px 18px #000;
-
+  margin-bottom: 20px;
   display: flex;
 }
 
@@ -40,7 +40,17 @@
   font-size: 25px;
 }
 
-.CartItem input[type="number"] {
+.Adition {
+  display: flex;
+}
+
+input {
+  text-align: center;
+}
+
+.Adition input[type="number"]::-webkit-inner-spin-button,
+.Adition input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   padding: 5px;
   font-size: 90%;
   border-radius: 10px;
@@ -78,46 +88,6 @@
 .CartItem .Remove:hover {
   background-color: #000000;
 }
-
-/* @media (max-width: 1245px) {
-  .CartItem img {
-    width: 95%;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-  }
-  .CartItem {
-    flex-wrap: wrap;
-    width: calc(100% - 560px);
-    height: 450px;
-  }
-  .Card-content {
-    margin: 0 auto;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-  }
-} */
-/* 
-@media (max-width: 1190px) {
-  .CartItem {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-  }
-  .CartItem img {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-  }
-  .Card-content {
-    margin: 0 auto;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-  }
-} */
-
 
 .Cart .OrderForm{
   margin: 0 0 10px 0;
