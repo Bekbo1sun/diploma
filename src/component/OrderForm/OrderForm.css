@@ -1,9 +1,7 @@
 .OrderForm {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: #ffffff;
-  padding: 30px;
+  align-items: center;
   border-radius: 4px;
 }
 
@@ -29,15 +27,16 @@
 
 .OrderForm input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #8ab6d6;
+  box-shadow: 0 0 0 2px #4099da;
 }
 
 .OrderForm button {
-  background-color: #8ab6d6;
+  background-color: #278ad1;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
+  list-style: none;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
