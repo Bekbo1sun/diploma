@@ -50,7 +50,7 @@ input {
 
 .Adition input[type="number"]::-webkit-inner-spin-button,
 .Adition input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+  --webkit-appearance: none;
   padding: 5px;
   font-size: 90%;
   border-radius: 10px;
