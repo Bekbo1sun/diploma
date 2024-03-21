@@ -6,15 +6,22 @@
   margin-left: 10px;
 }
 
+.CartItem:hover {
+  box-shadow: 10px 12px 18px #000;
+  border:2px solid #000 ;
+}
+
 .CartItem {
   width: 600px;
   background-color: #c4c4c4;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 10px 12px 18px #000;
+  transition: 0.5s;
   margin-bottom: 20px;
   display: flex;
 }
+
+
 
 .CartItem img {
   border: 2px solid #000;

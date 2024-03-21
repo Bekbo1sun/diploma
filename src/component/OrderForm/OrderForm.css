@@ -3,6 +3,7 @@
   background-color: #ffffff;
   align-items: center;
   border-radius: 4px;
+  justify-content: center;
 }
 
 .OrderForm h2 {

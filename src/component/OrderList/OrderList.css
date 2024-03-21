@@ -20,6 +20,10 @@
   padding: 20px;
   border-radius: 8px;
   width: 300px;
+  transition: 0.5s;
+}
+.OrderCard:hover {
+  box-shadow: #a5a5a5 0 5px 5px 0;
 }
 
 .CartCard {
