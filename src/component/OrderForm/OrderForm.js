@@ -11,7 +11,7 @@ export default function OrderForm() {
 
   if (Object.keys(cart).length === 0) {
     return "Your cart is empty";
-  };
+  }
 
   if (!user) {
     return "Please login to create an order.";
@@ -41,12 +41,16 @@ export default function OrderForm() {
         Name: <input type="text" name="name" required />
       </label>
       <label>
-        Phone:{" "}
-        <input
-          type="tel"
-          name="phone"
-          required
-        />
+        Tel:{" "}
+        <div style={{ display: "flex" }}>
+          <input type="tel" name="phone" required />
+          <select name="countryCode">
+            <option value="1">+1</option>
+            <option value="44">+44</option>
+            <option value="7">+7</option>
+            <option value="996">+996</option>
+          </select>
+        </div>
       </label>
       <label>
         Address: <input type="text" name="address" required />
