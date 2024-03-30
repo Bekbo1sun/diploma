@@ -5,6 +5,7 @@
 }
 
 .NavLink:hover,
+.NavLink:focus,
 .NavLink:focus-visible{
   --_p: 0px;
   outline-color: var(--c);
