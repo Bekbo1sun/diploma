@@ -24,13 +24,42 @@ export default function OrderForm() {
 
     addDoc(ordersCollection, {
       name: formData.get("name"),
-      phone: formData.get("phone"),
+      phone: formData.get("countryCode") + formData.get("phone"),
       user: user.uid,
       address: formData.get("address"),
       cart: cart,
     }).then((doc) => {
       setCart({});
       navigate("/thank-you");
+    });
+  }
+
+  // Объект соответствия стран и городов
+  const citiesByCountry = {
+    USA: ["New York", "Los Angeles", "Chicago"],
+    UK: ["London", "Manchester", "Birmingham"],
+    Russia: ["Moscow", "Saint Petersburg", "Yekaterinburg"],
+    Kyrgyzstan: ["Bishkek", "Osh", "Jalal-Abad"],
+    Uzbekistan: ["Tashkent", "Samarkand", "Bukhara"],
+    Kazakhstan: ["Almaty", "Nur-Sultan", "Shymkent"],
+    // Добавьте другие страны и их города по необходимости
+  };
+
+  // Функция для обновления списка городов при изменении выбранной страны
+  function updateCityOptions() {
+    const countrySelect = document.querySelector('select[name="country"]');
+    const citySelect = document.querySelector('select[name="city"]');
+    const selectedCountry = countrySelect.value;
+
+    // Очищаем список городов
+    citySelect.innerHTML = '';
+
+    // Заполняем список городов для выбранной страны
+    citiesByCountry[selectedCountry].forEach(city => {
+        const option = document.createElement('option');
+        option.text = city;
+        option.value = city;
+        citySelect.add(option);
     });
   }
 
@@ -53,8 +82,8 @@ export default function OrderForm() {
         </div>
       </label>
       <label>
-        Страна:
-        <select name="country">
+        Country:
+        <select name="country" onChange={updateCityOptions}>
           <option value="USA">USA</option>
           <option value="UK">UK</option>
           <option value="Russia">Russia</option>
@@ -62,6 +91,12 @@ export default function OrderForm() {
           <option value="Uzbekistan">Uzbekistan</option>
           <option value="Kazakhstan">Kazakhstan</option>
           {/* Добавьте другие страны по необходимости */}
+        </select>
+      </label>
+      <label>
+        City:
+        <select name="city">
+          {/* Опции городов будут добавлены динамически при выборе страны */}
         </select>
       </label>
       <label>
