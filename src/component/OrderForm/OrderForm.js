@@ -8,11 +8,11 @@ function OrderForm() {
       <div className="order-form-right-decoration"></div>
       <div className="circle"></div>
       <div className="order-form-inner">
-        <h3>Написать нам</h3>
+        <h3>Order</h3>
         <input type="text" placeholder="Username" />
         <input type="email" placeholder="Email" />
-        <textarea placeholder="Сообщение..." rows="3"></textarea>
-        <input type="submit" value="Отправить" />
+        <textarea placeholder="Address..." rows="3"></textarea>
+        <input type="submit" value="Submit" />
       </div>
     </form>
   );
