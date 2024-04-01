@@ -66,14 +66,14 @@ export default function OrderForm() {
   return (
     <form className="OrderForm" onSubmit={onFormSubmit}>
       <h2>Create an order</h2>
-      <label>
-        Name: <input type="text" name="name" required />
+      <label className="OrderForm-label">
+        Name: <input type="text" name="name" required className="OrderForm-input" />
       </label>
-      <label>
+      <label className="OrderForm-label">
         Telephone:{" "}
-        <div style={{ display: "flex" }}>
-          <input type="tel" name="phone" required />
-          <select name="countryCode">
+        <div className="OrderForm-inputGroup">
+          <input type="tel" name="phone" required className="OrderForm-input" />
+          <select name="countryCode" className="OrderForm-select">
             <option value="1">+1</option>
             <option value="44">+44</option>
             <option value="7">+7</option>
@@ -81,9 +81,9 @@ export default function OrderForm() {
           </select>
         </div>
       </label>
-      <label>
+      <label className="OrderForm-label">
         Country:
-        <select name="country" onChange={updateCityOptions}>
+        <select name="country" onChange={updateCityOptions} className="OrderForm-select">
           <option value="USA">USA</option>
           <option value="UK">UK</option>
           <option value="Russia">Russia</option>
@@ -93,16 +93,16 @@ export default function OrderForm() {
           {/* Добавьте другие страны по необходимости */}
         </select>
       </label>
-      <label>
+      <label className="OrderForm-label">
         City:
-        <select name="city">
+        <select name="city" className="OrderForm-select">
           {/* Опции городов будут добавлены динамически при выборе страны */}
         </select>
       </label>
-      <label>
-        Address: <input type="text" name="address" required />
+      <label className="OrderForm-label">
+        Address: <input type="text" name="address" required className="OrderForm-input" />
       </label>
-      <button>Submit</button>
+      <button className="OrderForm-button">Submit</button>
     </form>
   );
 }
