@@ -41,7 +41,7 @@ export default function OrderForm() {
         Name: <input type="text" name="name" required />
       </label>
       <label>
-        Tel:{" "}
+        Telephone:{" "}
         <div style={{ display: "flex" }}>
           <input type="tel" name="phone" required />
           <select name="countryCode">
@@ -51,6 +51,18 @@ export default function OrderForm() {
             <option value="996">+996</option>
           </select>
         </div>
+      </label>
+      <label>
+        Страна:
+        <select name="country">
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="Russia">Russia</option>
+          <option value="Kyrgyzstan">Kyrgyzstan</option>
+          <option value="Uzbekistan">Uzbekistan</option>
+          <option value="Kazakhstan">Kazakhstan</option>
+          {/* Добавьте другие страны по необходимости */}
+        </select>
       </label>
       <label>
         Address: <input type="text" name="address" required />
