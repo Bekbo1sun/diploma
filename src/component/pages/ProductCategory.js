@@ -1,5 +1,5 @@
 import "./ProductCategory.css";
-import React from 'react';
+import React from "react";
 
 function ProductCategory({ category }) {
   return (
@@ -10,8 +10,12 @@ function ProductCategory({ category }) {
           <div key={product.id} className="product">
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p>Price: {product.price}</p>
+            <h3>{product.description}</h3>
+            <p>
+              Price:
+              <span className="strikethrough">{product.price}</span>
+              <span className="price">{product.price}</span>
+            </p>
           </div>
         ))}
       </div>
