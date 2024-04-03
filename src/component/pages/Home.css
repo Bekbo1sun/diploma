@@ -1,4 +1,4 @@
-.Home h1 {
+/* .Home h1 {
   font-size: 30px;
   margin: 25px 0 15px 10px;
   font-variant-caps: petite-caps;
@@ -10,4 +10,14 @@
     max-width: 150px;
     margin: 0 auto;
   }
+} */
+
+.home-page {
+  padding: 20px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
